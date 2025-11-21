@@ -1,102 +1,103 @@
-import Link from 'next/link'
-import { Star, Award, Clock, Shield, ArrowRight } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-import { SiteHeader } from '@/components/site-header'
-import { SiteFooter } from '@/components/site-footer'
-import { CookieBanner } from '@/components/cookie-banner'
+import Link from "next/link"
+import { Star, Award, Clock, Shield, ArrowRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { SiteHeader } from "@/components/site-header"
+import { SiteFooter } from "@/components/site-footer"
+import { CookieBanner } from "@/components/cookie-banner"
 
 const featuredProducts = [
   {
-    slug: 'vitamix-5200',
-    name: 'Vitamix 5200',
-    category: 'Blenders',
-    rating: 4.8,
-    image: '/vitamix-blender.jpg',
-    price: '$449',
-    excerpt: 'Professional-grade blending power with unmatched durability and versatility.',
+    slug: "breville-bov845bss",
+    name: "Breville Smart Oven Pro",
+    category: "Toaster Ovens",
+    rating: 4.5,
+    image: "https://m.media-amazon.com/images/I/51YCCGCKWVL._AC_SX679_.jpg",
+    price: "$269.95",
+    excerpt: "Best all-around convection toaster oven with Element IQ™ technology for perfect results.",
   },
   {
-    slug: 'kitchenaid-artisan',
-    name: 'KitchenAid Artisan',
-    category: 'Stand Mixers',
-    rating: 4.7,
-    image: '/kitchenaid-stand-mixer.jpg',
-    price: '$379',
-    excerpt: 'Iconic design meets powerful performance for all your baking needs.',
+    slug: "panasonic-nb-g110p",
+    name: "Panasonic FlashXpress",
+    category: "Toaster Ovens",
+    rating: 4.5,
+    image: "https://m.media-amazon.com/images/I/8161T5X9p0L._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    price: "$149.99",
+    excerpt: "Double infrared heating — toast in 2 minutes without any preheating required.",
   },
   {
-    slug: 'breville-barista',
-    name: 'Breville Barista Express',
-    category: 'Coffee Makers',
-    rating: 4.6,
-    image: '/breville-espresso-machine.jpg',
-    price: '$699',
-    excerpt: 'Café-quality espresso at home with built-in grinder and precision controls.',
+    slug: "blackdecker-to1787ss",
+    name: "BLACK+DECKER 4-Slice Air Fry",
+    category: "Toaster Ovens",
+    rating: 4.3,
+    image: "https://m.media-amazon.com/images/I/81bVxVqoZFL._AC_SY300_SX300_QL70_FMwebp_.jpg",
+    price: "$69.99",
+    excerpt: "Compact toaster oven with built-in Air Fry for versatile cooking options.",
   },
 ]
 
 const benefits = [
   {
     icon: Award,
-    title: 'Expert Testing',
-    description: 'Every product undergoes rigorous testing in our dedicated kitchen lab by experienced reviewers.',
+    title: "Expert Testing",
+    description: "Every product undergoes rigorous testing in our dedicated kitchen lab by experienced reviewers.",
   },
   {
     icon: Clock,
-    title: 'Real-World Use',
-    description: 'We test products over weeks and months to understand long-term performance and durability.',
+    title: "Real-World Use",
+    description: "We test products over weeks and months to understand long-term performance and durability.",
   },
   {
     icon: Shield,
-    title: 'Unbiased Reviews',
-    description: 'Our reviews are completely independent and honest, helping you make informed decisions.',
+    title: "Unbiased Reviews",
+    description: "Our reviews are completely independent and honest, helping you make informed decisions.",
   },
   {
     icon: ArrowRight,
-    title: 'Updated Regularly',
-    description: 'We continuously update our reviews as new products launch and testing methods improve.',
+    title: "Updated Regularly",
+    description: "We continuously update our reviews as new products launch and testing methods improve.",
   },
 ]
 
 const categories = [
   {
-    name: 'Blenders',
-    count: '24 Reviews',
-    image: '/blender-kitchen-appliance.jpg',
+    name: "Blenders",
+    count: "24 Reviews",
+    image: "/blender-kitchen-appliance.jpg",
   },
   {
-    name: 'Coffee Makers',
-    count: '18 Reviews',
-    image: '/coffee-maker-machine.jpg',
+    name: "Coffee Makers",
+    count: "18 Reviews",
+    image: "/coffee-maker-machine.jpg",
   },
   {
-    name: 'Stand Mixers',
-    count: '15 Reviews',
-    image: '/stand-mixer-kitchen.jpg',
+    name: "Stand Mixers",
+    count: "15 Reviews",
+    image: "/stand-mixer-kitchen.jpg",
   },
   {
-    name: 'Food Processors',
-    count: '12 Reviews',
-    image: '/food-processor.png',
+    name: "Food Processors",
+    count: "12 Reviews",
+    image: "/food-processor.png",
   },
 ]
 
 const testimonials = [
   {
-    quote: 'BlendTested helped me find the perfect blender for my smoothie business. Their detailed testing saved me from making an expensive mistake!',
-    author: 'Emily Thompson',
-    role: 'Small Business Owner',
+    quote:
+      "BlendTested helped me find the perfect blender for my smoothie business. Their detailed testing saved me from making an expensive mistake!",
+    author: "Emily Thompson",
+    role: "Small Business Owner",
   },
   {
-    quote: 'The most thorough kitchen appliance reviews on the internet. I trust their recommendations completely.',
-    author: 'Michael Anderson',
-    role: 'Home Chef',
+    quote: "The most thorough kitchen appliance reviews on the internet. I trust their recommendations completely.",
+    author: "Michael Anderson",
+    role: "Home Chef",
   },
   {
-    quote: 'Finally, honest reviews that actually test products instead of just reading specs. This site is a game-changer.',
-    author: 'Jessica Williams',
-    role: 'Cooking Enthusiast',
+    quote:
+      "Finally, honest reviews that actually test products instead of just reading specs. This site is a game-changer.",
+    author: "Jessica Williams",
+    role: "Cooking Enthusiast",
   },
 ]
 
@@ -104,14 +105,10 @@ export default function HomePage() {
   return (
     <div className="flex min-h-screen flex-col relative">
       <div className="fixed inset-0 z-0">
-        <img
-          src="/homepage-aesthetic-bg.jpg"
-          alt=""
-          className="w-full h-full object-cover"
-        />
+        <img src="/homepage-aesthetic-bg.jpg" alt="" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-white/40" />
       </div>
-      
+
       <div className="relative z-10">
         <SiteHeader />
 
@@ -121,8 +118,7 @@ export default function HomePage() {
             <div className="container mx-auto px-4 relative">
               <div className="max-w-4xl mx-auto text-center">
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-balance mb-6 tracking-tight warm-text">
-                  Kitchen Appliances,{' '}
-                  <span className="text-primary">Expertly Tested</span>
+                  Kitchen Appliances, <span className="text-primary">Expertly Tested</span>
                 </h1>
                 <p className="text-xl md:text-2xl text-muted-foreground text-balance mb-12 leading-relaxed">
                   Comprehensive reviews to help you find the perfect tools for your kitchen
@@ -134,7 +130,12 @@ export default function HomePage() {
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
-                  <Button asChild variant="outline" size="lg" className="text-base h-12 px-8 float-gentle rounded-xl">
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="lg"
+                    className="text-base h-12 px-8 float-gentle rounded-xl bg-transparent"
+                  >
                     <Link href="/about">Our Process</Link>
                   </Button>
                 </div>
@@ -163,7 +164,9 @@ export default function HomePage() {
                       />
                     </div>
                     <div className="p-6">
-                      <div className="text-xs text-primary font-semibold mb-2 uppercase tracking-wide">{product.category}</div>
+                      <div className="text-xs text-primary font-semibold mb-2 uppercase tracking-wide">
+                        {product.category}
+                      </div>
                       <h3 className="text-xl font-semibold mb-3">{product.name}</h3>
                       <div className="flex items-center gap-2 mb-4">
                         <div className="flex">
@@ -171,9 +174,7 @@ export default function HomePage() {
                             <Star
                               key={i}
                               className={`h-4 w-4 ${
-                                i < Math.floor(product.rating)
-                                  ? 'fill-primary text-primary'
-                                  : 'text-border'
+                                i < Math.floor(product.rating) ? "fill-primary text-primary" : "text-border"
                               }`}
                             />
                           ))}
@@ -195,7 +196,12 @@ export default function HomePage() {
               </div>
 
               <div className="text-center mt-12">
-                <Button asChild variant="outline" size="lg" className="h-12 px-8 float-gentle rounded-xl">
+                <Button
+                  asChild
+                  variant="outline"
+                  size="lg"
+                  className="h-12 px-8 float-gentle rounded-xl bg-transparent"
+                >
                   <Link href="/reviews">View All Reviews</Link>
                 </Button>
               </div>
@@ -206,7 +212,9 @@ export default function HomePage() {
           <section className="py-20 md:py-28 bg-white/60 backdrop-blur-sm">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4 tracking-tight warm-text">Why BlendTested?</h2>
+                <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4 tracking-tight warm-text">
+                  Why BlendTested?
+                </h2>
                 <p className="text-lg text-muted-foreground text-balance max-w-2xl mx-auto">
                   Transparent, thorough, and trustworthy reviews
                 </p>
@@ -230,7 +238,9 @@ export default function HomePage() {
           <section className="py-20 md:py-28 bg-white">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4 tracking-tight warm-text">Browse by Category</h2>
+                <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4 tracking-tight warm-text">
+                  Browse by Category
+                </h2>
                 <p className="text-lg text-muted-foreground text-balance max-w-2xl mx-auto">
                   Find reviews for the appliances you need
                 </p>
@@ -263,7 +273,9 @@ export default function HomePage() {
           <section className="py-20 md:py-28 bg-white/60 backdrop-blur-sm">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4 tracking-tight warm-text">Trusted by Thousands</h2>
+                <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4 tracking-tight warm-text">
+                  Trusted by Thousands
+                </h2>
                 <p className="text-lg text-muted-foreground text-balance max-w-2xl mx-auto">
                   Real feedback from our community
                 </p>
@@ -303,7 +315,12 @@ export default function HomePage() {
                   <p className="text-lg md:text-xl text-primary-foreground/90 text-balance max-w-2xl mx-auto mb-10 leading-relaxed">
                     Browse our comprehensive reviews and make informed decisions for your kitchen
                   </p>
-                  <Button asChild size="lg" variant="secondary" className="h-12 px-8 text-base rounded-xl clean-surface">
+                  <Button
+                    asChild
+                    size="lg"
+                    variant="secondary"
+                    className="h-12 px-8 text-base rounded-xl clean-surface"
+                  >
                     <Link href="/reviews">
                       Explore All Reviews
                       <ArrowRight className="ml-2 h-4 w-4" />
